@@ -23,7 +23,7 @@ kubectl create -f ingress-deployment.yaml
 kubectl create -f ingress-service.yaml 
 ```
 
-## Create Ingress ruls for Ghost blog application
+## Create Ingress rules for Ghost blog application
 ```
 kubectl create -f ghost-ingress.yaml
 ```
