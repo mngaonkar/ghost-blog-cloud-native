@@ -5,3 +5,5 @@ There are lots of way to host your blog on internet. Broadly categorized in mana
 ## Selecting a Cloud Provider
 The important criteria for choosing a particular cloud provider is cost. As a developer, one of the great recommendation is DigitalOcean. A virtual machine having 1 vCPU, 2GB memory and 40 GB of disk would be a good choice.
 
+## Why Cloud Native?
+The biggest driver for going cloud native is vendor agnostic. Most people want to have that freedom to move their blog to any cloud provider in future seamlessly. Going cloud native also means, moving away from the managed blog service provided by cloud provider. In this case, DigitalOcean does provide Ghost blog service. Using managed service helps to get the blog up and running in no time but provide no flexibility for workload movement. The idea here is to demonstrate the cloud native way so that it can be applied to any application not just a blog.
