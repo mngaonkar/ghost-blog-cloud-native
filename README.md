@@ -17,3 +17,8 @@ The next step is to have a container orchestration platform to deploy the blog c
 For infrastructure automation, we will use Terraform (https://www.terraform.io) to spin up a virtual machine in cloud. For host management, we will use Ansible (https://www.ansible.com) to install single node kubernetes cluster.
 
 Refer https://github.com/mngaonkar/ghost-blog-cloud-native/tree/master/ghost-blog-kubernetes-infra
+
+## Deploying Ghost blog
+Ghost blog container is deployed on kubernetes cluster as a service. For public access, we have used Ingress controller provided by Nginx.
+
+Refer https://github.com/mngaonkar/ghost-blog-cloud-native/tree/master/ghost-blog-deployment
