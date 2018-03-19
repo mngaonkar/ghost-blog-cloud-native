@@ -25,4 +25,4 @@ Once the cluster is up and running. Copy /etc/kubernetes/admin.conf as ~/.kube/c
 ```
 kubectl get nodes
 ```
-Copy kubernetes config from virtual machine to local machine. Set environment variable KUBE_CONFIG to point to config file. Now you can run kubectl command from local machine to manage kubernetes cluster.
+Copy kubernetes config from virtual machine to local machine. Set environment variable KUBECONFIG to point to config file. Now you can run kubectl command from local machine to manage kubernetes cluster.
