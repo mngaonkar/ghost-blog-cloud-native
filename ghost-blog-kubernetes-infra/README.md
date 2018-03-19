@@ -1,4 +1,4 @@
-### Prerequisite
+## Prerequisite
 Set DigitalOcean token environment variable
 ```
 export DO_TOKEN=<your token here>
@@ -13,5 +13,10 @@ ssh-keygen -t rsa
 Run go script. The terraform infrastructure as code is defined in file [ghost_cluster.tf](https://github.com/mngaonkar/ghost-blog-cloud-native/blob/master/ghost-blog-kubernetes-infra/ghost_cluster.tf)
 ```
 go run deploy_ghost_cluster.go 
+```
+
+## Install Kubernetes by running Ansible playbook
+```
+ansible-playbook playbook.yml
 ```
 
