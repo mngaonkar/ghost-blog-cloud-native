@@ -20,7 +20,7 @@ Install kubernetes by running Ansible playbook
 ```
 ansible-playbook playbook.yml
 ```
-Once the cluster is up and running. Copy /etc/kubernetes/admin.conf to ~/.kube/config in virutal machine. Check the cluster state by running kubectl command in virtual machine.
+Once the cluster is up and running. Copy /etc/kubernetes/admin.conf as ~/.kube/config in virutal machine. Check the cluster state by running kubectl command in virtual machine.
 ```
 kubectl get nodes
 ```
