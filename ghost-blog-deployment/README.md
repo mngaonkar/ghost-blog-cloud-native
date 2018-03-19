@@ -27,3 +27,5 @@ kubectl create -f ingress-service.yaml
 ```
 kubectl create -f ghost-ingress.yaml
 ```
+
+The Ghost blog now will be accessible at virtual machine public IP.
