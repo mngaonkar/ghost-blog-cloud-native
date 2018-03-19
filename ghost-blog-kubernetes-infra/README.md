@@ -9,8 +9,8 @@ Make sure public and private keys are generated for local machine. The kyes are 
 ssh-keygen -t rsa
 ```
 
-Create a virtual machine in cloud
-Run go script. The terraform infrastructure as code is defined in file ghost_cluster.tf
+## Create a virtual machine in cloud
+Run go script. The terraform infrastructure as code is defined in file [ghost_cluster.tf] (https://github.com/mngaonkar/ghost-blog-cloud-native/blob/master/ghost-blog-kubernetes-infra/ghost_cluster.tf)
 ```
 go run deploy_ghost_cluster.go 
 ```
