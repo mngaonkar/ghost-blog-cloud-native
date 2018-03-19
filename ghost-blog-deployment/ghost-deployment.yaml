@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghost-deployment
+  labels:
+    app: ghost
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ghost
+  template:
+    metadata:
+      labels:
+        app: ghost
+    spec:
+      containers:
+      - name: ghost
+        image: mngaonkar/ghost
+        volumeMounts:
+        - mountPath: /var/www/ghost/content
+          name: ghost-content-volume
+          readOnly: false  
+        ports:
+        - containerPort: 2368
+      volumes:
+      - name: ghost-content-volume
+        hostPath:
+          path: /root/var/www/ghost/content
+          type: Directory
