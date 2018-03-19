@@ -15,8 +15,13 @@ Run go script. The terraform infrastructure as code is defined in file [ghost_cl
 go run deploy_ghost_cluster.go 
 ```
 
-## Install Kubernetes by running Ansible playbook
+## Create Kubernetes cluster
+Install kubernetes by running Ansible playbook
 ```
 ansible-playbook playbook.yml
 ```
-
+Once the cluster is up and running. Copy /etc/kubernetes/admin.conf to ~/.kube/config in virutal machine. Check the cluster state by running kubectl command in virtual machine.
+```
+kubectl get nodes
+```
+Copy kubernetes config from virtual machine to local machine. Set environment variable KUBE_CONFIG to point to config file. Now you can run kubectl command from local machine to manage kubernetes cluster.
