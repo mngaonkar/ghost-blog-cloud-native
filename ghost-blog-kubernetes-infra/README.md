@@ -10,10 +10,11 @@ ssh-keygen -t rsa
 ```
 
 ## Create a virtual machine in cloud
-Run go script. The terraform infrastructure as code is defined in file [ghost_cluster.tf](https://github.com/mngaonkar/ghost-blog-cloud-native/blob/master/ghost-blog-kubernetes-infra/ghost_cluster.tf). This command will create a virtual machine in cloud. Update [hosts](https://github.com/mngaonkar/ghost-blog-cloud-native/blob/master/ghost-blog-kubernetes-infra/hosts) file with public IP address of virtual machine.
+Run go script. The terraform infrastructure as code is defined in file [ghost_cluster.tf](https://github.com/mngaonkar/ghost-blog-cloud-native/blob/master/ghost-blog-kubernetes-infra/ghost_cluster.tf). This command will create a virtual machine in cloud. 
 ```
 go run deploy_ghost_cluster.go 
 ```
+Once the virtual machine is created, update [hosts](https://github.com/mngaonkar/ghost-blog-cloud-native/blob/master/ghost-blog-kubernetes-infra/hosts) file with public IP address of virtual machine.
 
 ## Create Kubernetes cluster
 Install kubernetes by running Ansible playbook
