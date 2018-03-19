@@ -4,4 +4,5 @@ The Ghost blog installation is run with root user and the configuration as admin
 
 ```
 docker build -t mngaonkar/ghost .
+docker push mngaonkar/ghost
 ```
