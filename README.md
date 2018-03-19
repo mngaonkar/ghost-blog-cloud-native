@@ -7,3 +7,7 @@ The important criteria for choosing a particular cloud provider is cost. As a de
 
 ## Why Cloud Native?
 The biggest driver for going cloud native is vendor agnostic. Most people want to have that freedom to move their blog to any cloud provider in future seamlessly. Going cloud native also means, moving away from the managed blog service provided by cloud provider. In this case, DigitalOcean does provide Ghost blog service. Using managed service helps to get the blog up and running in no time but provide no flexibility for workload movement. The idea here is to demonstrate the cloud native way so that it can be applied to any application not just a blog.
+
+## Containerization
+The first step toward cloud native is to get your application containerized. For Ghost is more straight forward to spin up a container with Ubuntu as base image. Refer https://github.com/mngaonkar/ghost-blog-cloud-native/tree/master/ghost-blog-containerization
+
