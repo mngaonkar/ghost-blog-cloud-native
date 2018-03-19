@@ -14,6 +14,6 @@ The first step toward cloud native is to get your application containerized. For
 ## Building Kubernetes Infrastructure
 The next step is to have a container orchestration platform to deploy the blog container. We will use kubernetes as container orchestrator. A typical kubernetes cluster is recommended to have three nodes, one for master and two for worker. In this example, we will build a single node cluster. This mean a single node will act as master and worker. Note, it is possible to add more workers at later time to the same cluster if needed.  
 
-For infrastructure automation, we will use [Terraform] (https://www.terraform.io) to spin up a virtual machine in cloud. For host management, we will use [Ansible] (https://www.ansible.com) to install single node kubernetes cluster.
+For infrastructure automation, we will use Terraform (https://www.terraform.io) to spin up a virtual machine in cloud. For host management, we will use Ansible (https://www.ansible.com) to install single node kubernetes cluster.
 
 Refer https://github.com/mngaonkar/ghost-blog-cloud-native/tree/master/ghost-blog-kubernetes-infra
