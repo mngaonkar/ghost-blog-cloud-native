@@ -44,6 +44,8 @@
 
 - name: "Reset kubernetes"
   shell: kubeadm reset
+  tags:
+    - reset
 
 - name: "Initializing kubernetes"
   shell: kubeadm init --pod-network-cidr=192.168.0.0/16
@@ -53,11 +55,16 @@
 
 - name: "Configuring kubernetes network"
   shell: kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
+  tags:
+    - network
 
 - name: "Configuring nginx ingress"
-  shell: curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/provider/baremetal/service-nodeport.yaml \
+  shell: curl -s https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/provider/baremetal/service-nodeport.yaml \
     | kubectl apply -f -
+  tags:
+    - ingress
 
 - name: "Configuring single node cluster"
   shell: kubectl taint nodes --all node-role.kubernetes.io/master-
-  
+  tags:
+    - configure

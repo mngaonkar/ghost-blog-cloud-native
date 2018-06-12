@@ -10,7 +10,7 @@ provider "digitalocean" {
 resource "digitalocean_droplet" "ghost_master" {
   image = "ubuntu-16-04-x64"
   name = "ghost-master"
-  region = "blr1"
+  region = "sfo2"
   size = "2gb"
   private_networking = true
   ssh_keys = [

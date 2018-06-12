@@ -1,3 +1,6 @@
+/*
+Create a virtual machine in cloud and setup single node Kubernetes cluster
+*/
 package main
 
 import (
@@ -21,18 +24,22 @@ func main() {
   //ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub
   os.Setenv("TF_VAR_ssh_fingerprint", os.Getenv("SSH_FINGERPRINT"))
 
-  execute_version_command()
-  execute_apply_command()
-  //execute_destroy_command()
+  get_version()
+  create_virtual_machine()
+  //setup_kubernetes_cluster()
+
+  //delete_virtual_machine()
   //log.Printf(parameters)
 
 }
 
-func execute_version_command(){
+// get terraform version
+func get_version(){
   execute_command("terraform", []string{"version"})
 }
 
-func execute_apply_command(){
+// create virual machine, change parameters in tf file
+func create_virtual_machine(){
   parameters := make([]string, 0)
   parameters = append(parameters, "apply")
   parameters = append(parameters, "--auto-approve")
@@ -40,7 +47,15 @@ func execute_apply_command(){
   execute_command("terraform", parameters)
 }
 
-func execute_destroy_command(){
+// create Kubernetes cluster
+func setup_kubernetes_cluster() {
+  parameters := make([]string, 0)
+  parameters = append(parameters, "playbook.yml")
+  execute_command("ansible-playbook", parameters)
+}
+
+// delete virtual machine
+func delete_virtual_machine(){
   parameters := make([]string, 0)
   parameters = append(parameters, "destroy")
   parameters = append(parameters, "--force")
