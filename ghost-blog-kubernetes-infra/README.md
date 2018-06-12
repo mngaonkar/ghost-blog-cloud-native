@@ -14,7 +14,7 @@ Run go script. The terraform infrastructure as code is defined in file [ghost_cl
 ```
 go run deploy_ghost_cluster.go 
 ```
-You may need to run ```terraform init``` command before running go code.
+You may need to run ```terraform init``` command to install digitalocean provider plugin before running go code.
 
 Once the virtual machine is created, update [hosts](https://github.com/mngaonkar/ghost-blog-cloud-native/blob/master/ghost-blog-kubernetes-infra/hosts) file with public IP address of virtual machine.
 
