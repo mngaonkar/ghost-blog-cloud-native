@@ -1,3 +1,8 @@
+## Pre-requisite
+```
+mkdir -p /root/var/www/ghost/content
+```
+
 ## Ghost blog application deployment
 ```
 kubectl create -f ghost-deployment.yaml
