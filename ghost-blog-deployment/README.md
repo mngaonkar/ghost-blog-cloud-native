@@ -23,11 +23,6 @@ kubectl create -f ingress-namespace.yaml
 kubectl create -f ingress-deployment.yaml
 ```
 
-## Create Ingress default backend service
-```
-kubectl create -f ingress-service.yaml 
-```
-
 ## Create Ingress rules for Ghost blog application
 ```
 kubectl create -f ghost-ingress.yaml
